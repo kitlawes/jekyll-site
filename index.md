@@ -4,3 +4,13 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+test
+{% for post in paginator.posts %}
+  {% if post.toc %}
+    {{ post.content | toc }}
+  {% else %}
+    {{ post.content }}
+  {% endif %}
+{% endfor %}
+test
